@@ -1,0 +1,22 @@
+
+  <ion-navbar color="whatzapp">
+
+
+
+  <ion-title>
+    <ion-item detail-none no-lines color="transparent" *ngIf="user; else titleTemplate">
+      <ion-avatar item-left>
+        <img [src]="user.photo || 'assets/images/no-photo.jpg'">
+      </ion-avatar>
+      <label class="name-header">{{title}}</label>
+    </ion-item>
+    <ng-template #titleTemplate>
+        {{title}}
+    </ng-template>
+     
+  </ion-title>
+
+  <button ion-button end menuToggle="user-menu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+</ion-navbar>
