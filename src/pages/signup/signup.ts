@@ -1,14 +1,13 @@
 
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, Loading, LoadingController, AlertController } from 'ionic-angular';
+import {  NavController, NavParams, ToastController, Loading, LoadingController, AlertController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from './../../providers/auth/auth.service';
 import { UserService } from './../../providers/user/user.service';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/map';
 
-@IonicPage()
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',

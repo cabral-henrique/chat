@@ -18,7 +18,7 @@ import { User } from './../../models/user.model';
 })
 export class HomePage {
   users: User[];
-  view: string = "Chats";
+  view: string = "Contatinhos";
   chats: Observable<Chat[]>;
   chat: Chat;
   constructor(public navCtrl: NavController,

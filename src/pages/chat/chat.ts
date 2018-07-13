@@ -2,7 +2,7 @@
 import { MessageService } from './../../providers/message/message';
 import { Message } from './../../models/message.model';
 import { Component, ViewChild, OnDestroy } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { NavController, NavParams, Content } from 'ionic-angular';
 
 import { AuthService } from './../../providers/auth/auth.service';
 import { User } from '../../models/user.model';
@@ -13,7 +13,6 @@ import { ChatService } from '../../providers/chat/chat.service';
 import { AngularFireObject } from '../../../node_modules/angularfire2/database';
 import { Subscription } from '../../../node_modules/rxjs';
 
-@IonicPage()
 @Component({
   selector: 'page-chat',
   templateUrl: 'chat.html',

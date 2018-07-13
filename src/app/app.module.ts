@@ -21,13 +21,10 @@ import { AuthService } from './../providers/auth/auth.service';
 import { UserService } from './../providers/user/user.service';
 import { ChatService } from '../providers/chat/chat.service';
 import { MessageService } from '../providers/message/message';
-import { MessageBoxComponent } from '../components/message-box/message-box';
-import { UserInfoComponent } from '../components/user-info/user-info';
-import { UserMenuComponent } from '../components/user-menu/user-menu';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
 import { AngularFireStorageModule } from '../../node_modules/angularfire2/storage';
 import { Camera } from '../../node_modules/@ionic-native/camera';
-import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
+import { ComponentsModule } from '../components/components.module';
 
 
 const firebaseAppConfig = {
@@ -43,23 +40,19 @@ const firebaseAppConfig = {
 @NgModule({
   declarations: [
     ChatPage,
-    CustomLoggedHeaderComponent,
     HomePage,
     MyApp,
-    MessageBoxComponent,
-    ProgressBarComponent,
     SignupPage,
     SigninPage,
-    UserInfoComponent,
-    UserProfilePage,
-    UserMenuComponent
+    UserProfilePage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AngularFireStorageModule,
     HttpModule,
     CommonModule,
-    AngularFireStorageModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAppConfig),
     AngularFireDatabaseModule,

@@ -14,7 +14,6 @@ import { ProgressBarComponent } from './progress-bar/progress-bar';
     UserMenuComponent,
     ProgressBarComponent],
   imports: [
-    CustomLoggedHeaderComponent,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
